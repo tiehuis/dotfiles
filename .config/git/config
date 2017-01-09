@@ -1,0 +1,20 @@
+[credential "https://bitbucket.org"]
+    username = tiehuis
+[credential "https://github.com"]
+    username = tiehuis
+[user]
+    name = tiehuis
+    email = marctiehuis@gmail.com
+[push]
+    default = simple
+[credential]
+    helper = cache
+[core]
+    pager = less -F -X
+	editor = nvim
+    whitespace = trailing-space
+[alias]
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset \
+        -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+        --abbrev-commit
+    df = diff --color --color-words --abbrev

@@ -44,6 +44,10 @@ set backup
 set backupdir=~/.config/nvim/back//
 set directory=~/.config/nvim/swap//
 
+" ensure backup directories are present (Note: takes ~5ms)
+silent !mkdir ~/.config/nvim/back// > /dev/null 2>&1
+silent !mkdir ~/.config/nvim/swap// > /dev/null 2>&1
+
 " @ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 let g:ctrlp_use_caching = 0

@@ -4,4 +4,4 @@ if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
 fi
 
 # we want exports so things like gtk2 are themed correctly
-source .config/zsh/export.zsh
+source ~/.config/zsh/export.zsh

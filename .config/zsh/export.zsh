@@ -1,4 +1,4 @@
-export PATH=$PATH:~/bin:~/.local/share/cargo/bin
+export PATH=$PATH:~/bin:~/.local/share/cargo/bin:~/.gem/ruby/2.4.0/bin
 export EDITOR='nvim'
 
 # Aliases for better .config conformance

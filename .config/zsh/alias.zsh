@@ -4,6 +4,7 @@ alias pacman='sudo pacman'
 alias ls='ls --color=auto'
 alias feh='feh --image-bg black'
 alias vim='nvim'
+alias cower='cower -t ~/aur'
 
 # mpv offshoots
 alias mpi='mpv -profile image'

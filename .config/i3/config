@@ -59,7 +59,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+u layout toggle split
+bindsym $mod+x layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -102,9 +102,6 @@ bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
-# kill the x-server with no warning
-bindsym $mod+Shift+m exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

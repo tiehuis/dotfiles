@@ -11,14 +11,8 @@ general {
         interval = 7
 }
 
-order += "disk /home/me"
 order += "tztime local"
 
 tztime local {
         format = "%d - %H:%M:%S"
-}
-
-disk "/home/me" {
-        format = "%avail"
-        prefix_type = "decimal"
 }

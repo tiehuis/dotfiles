@@ -33,9 +33,6 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " markdown
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=80 fo+=t
 
-" adjust colorscheme for markdown
-autocmd FileType markdown colorscheme pencil
-
 " spellcheck markdown files only
 autocmd FileType markdown setlocal spell spelllang=en_nz
 

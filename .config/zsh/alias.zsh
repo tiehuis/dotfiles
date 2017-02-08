@@ -1,7 +1,7 @@
 # generic
 alias apt='sudo apt'
 alias pacman='sudo pacman'
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias feh='feh --image-bg black'
 alias vim='nvim'
 alias cower='cower -t ~/aur'

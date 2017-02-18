@@ -13,7 +13,7 @@ Plug 'mhinz/vim-signify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tiehuis/0x4545-256.vim'
-Plug 'vim-scripts/a.vim'
+Plug 'nacitar/a.vim'
 
 " lang-specific
 Plug 'rust-lang/rust.vim'

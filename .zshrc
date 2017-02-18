@@ -6,5 +6,6 @@ source $PX/completion.zsh
 source $PX/export.zsh
 source $PX/general.zsh
 source $PX/history.zsh
+source $PX/lang.zsh
 source $PX/prompt.zsh
 source $PX/zplug.zsh

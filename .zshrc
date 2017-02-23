@@ -1,6 +1,7 @@
 PX=~/.config/zsh
 
 source $PX/export.zsh       # Must be first
+source $PX/function.zsh     # Must be second
 source $PX/alias.zsh
 source $PX/bindkey.zsh
 source $PX/completion.zsh

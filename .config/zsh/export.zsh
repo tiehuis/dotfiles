@@ -15,3 +15,7 @@ export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME/httpie"
 
 # prevent wine creating menu/desktop entries
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
+# speed up fzf performance with ripgrep
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow \
+                                --glob "!.git/*"'

@@ -1,5 +1,5 @@
 [user]
-    name = tiehuis
+    name = Marc Tiehuis
     email = marctiehuis@gmail.com
 
 [credential "https://bitbucket.org"]
@@ -8,6 +8,9 @@
 [credential "https://github.com"]
     username = tiehuis
 
+[advice]
+    statusHints = false
+    detachedHead = false
 
 [push]
     default = simple
@@ -24,7 +27,16 @@
     algorithm = patience
 
 [alias]
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset            \
-        -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
-        --abbrev-commit
-    df = diff --color --color-words --abbrev
+    a  = add
+    b  = !git for-each-ref --sort='-authordate'                             \
+            --format='%(authordate)%09%(objectname:short)%09%(refname)'     \
+            refs/heads | sed -e 's-refs/heads/--'
+    c  = commit --verbose
+    ca = commit --verbose --amend
+    d  = diff --patch-with-stat
+    ds = diff --patch-with-stat --staged
+    l  = log --color --graph --pretty=format:'%Cred%h%Creset                \
+            -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' \
+            --abbrev-commit
+    p  = push
+    s  = status

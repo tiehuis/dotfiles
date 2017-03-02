@@ -19,12 +19,13 @@
     helper = cache
 
 [core]
-    pager = less -+F -X
     editor = nvim
+    excludesfile = ~/.config/git/ignore
+    pager = less -+F -X
     whitespace = trailing-space
 
 [diff]
-    algorithm = patience
+    algorithm = histogram
 
 [alias]
     a  = add

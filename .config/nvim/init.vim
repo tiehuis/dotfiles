@@ -83,7 +83,7 @@ augroup END
 let c_no_curly_error=1
 
 " use the system clipboard by default: linux
-let g:clipbrdDefaultReg = '+'
+set clipboard=unnamed
 
 " use jj to leave insert mode
 inoremap jj <esc>

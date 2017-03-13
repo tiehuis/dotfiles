@@ -1,0 +1,11 @@
+separator_block_width=25
+
+[volume]
+instance=Master
+command=bash ~/.config/i3blocks/volume
+interval=once
+signal=10
+
+[time]
+command=date '+%d - %T'
+interval=7

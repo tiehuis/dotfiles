@@ -5,6 +5,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias feh='feh --image-bg black'
 alias vim='nvim'
 alias cower='cower -t ~/aur'
+alias g='git'
 alias cut='cut -d" "'
 
 # mpv offshoots

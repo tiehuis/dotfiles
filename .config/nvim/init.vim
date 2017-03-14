@@ -6,7 +6,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " general
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'mhinz/vim-signify'

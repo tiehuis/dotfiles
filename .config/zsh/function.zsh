@@ -3,7 +3,7 @@ fzf-open-file-or-dir() {
         \\( -path '*/\\.*' -o -fstype 'dev' -o -fstype 'proc' \\) -prune \
         -o -type f -print \
         -o -type d -print \
-        -o -type l -print 2> /dev/null | sed 1d | cut -b3-"
+        -o -type l -print 2> /dev/null | sed 1d | \cut -b3-"
     local out=$(eval $cmd | fzf-tmux --exit-0)
 
     if [ -f "$out" ]; then

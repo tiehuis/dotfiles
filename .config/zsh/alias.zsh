@@ -7,6 +7,7 @@ alias vim='nvim'
 alias cower='cower -t ~/aur'
 alias g='git'
 alias cut='cut -d" "'
+alias tree='tree -L 2 --noreport'
 
 # mpv offshoots
 alias mpi='mpv -profile image'

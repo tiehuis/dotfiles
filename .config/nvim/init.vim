@@ -16,8 +16,12 @@ Plug 'nacitar/a.vim'
 
 " lang-specific
 Plug 'rust-lang/rust.vim'
+Plug 'JuliaEditorSupport/julia-vim'
 
 call plug#end()
+
+" automatically insert unicode symbols for julia
+let g:latex_to_unicode_auto = 1
 
 " indentation based on file-type is okay
 filetype plugin indent on

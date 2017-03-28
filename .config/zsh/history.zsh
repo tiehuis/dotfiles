@@ -4,6 +4,9 @@ setopt HIST_IGNORE_SPACE
 # don't display duplicates in line editor
 setopt HIST_FIND_NO_DUPS
 
+# don't display consecutive duplicates in history
+setopt HIST_IGNORE_DUPS
+
 # don't display history command in history
 setopt HIST_NO_STORE
 

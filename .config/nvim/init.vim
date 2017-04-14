@@ -68,7 +68,7 @@ let g:pencil_gutter_color = 1
 let g:pencil_terminal_italics = 1
 
 " need to know where those 80 lines are
-set colorcolumn=80
+set colorcolumn=81
 
 " key mappings
 map j gj

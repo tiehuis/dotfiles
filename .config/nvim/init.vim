@@ -12,6 +12,7 @@ Plug 'mhinz/vim-signify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tiehuis/0x4545-256.vim'
+Plug 'andrewrk/zig.vim'
 Plug 'nacitar/a.vim'
 
 " lang-specific
@@ -28,7 +29,7 @@ filetype plugin indent on
 
 " use the most minimal syntax highlighting possible
 syntax on
-colorscheme 0x4545-256
+colorscheme desert
 
 " git
 autocmd Filetype gitcommit setlocal spell textwidth=72

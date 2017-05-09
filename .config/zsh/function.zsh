@@ -13,3 +13,8 @@ fzf-open-file-or-dir() {
         zle reset-prompt
     fi
 }
+
+swap() {
+    local tmpfile=tmp.$$
+    mv "$1" "$tmpfile" && mv "$2" "$1" && mv "$tmpfile" "$2"
+}

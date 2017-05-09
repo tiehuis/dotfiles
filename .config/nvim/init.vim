@@ -6,16 +6,17 @@ call plug#begin('~/.config/nvim/plugged')
 
 " general
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/vim-peekaboo'
 Plug 'mhinz/vim-signify'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'reedes/vim-colors-pencil'
 Plug 'tiehuis/0x4545-256.vim'
-Plug 'andrewrk/zig.vim'
+Plug 'ciaranm/detectindent'
 Plug 'nacitar/a.vim'
+Plug 'mesonbuild/meson', { 'do': 'mv syntax-highlighting/vim/* .' }
 
 " lang-specific
+Plug 'andrewrk/zig.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'JuliaEditorSupport/julia-vim'
 
@@ -62,10 +63,6 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")' : ['<c-t>'],
     \ 'AcceptSelection("t")' : ['<cr>', '<2-LeftMouse>'],
     \ }
-
-" @vim-colors-pencil
-let g:pencil_gutter_color = 1
-let g:pencil_terminal_italics = 1
 
 " need to know where those 80 lines are
 set colorcolumn=81

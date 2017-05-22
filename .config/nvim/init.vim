@@ -67,6 +67,9 @@ let g:ctrlp_prompt_mappings = {
 " need to know where those 80 lines are
 set colorcolumn=81
 
+" zig + set line length to 100
+au BufNewFile,BufFilePre,BufRead *.zig set filetype=zig cc=101
+
 " key mappings
 map j gj
 map k gk

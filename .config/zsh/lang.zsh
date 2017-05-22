@@ -10,3 +10,6 @@ export RUSTUP_HOME=~/.local/share/rustup
 
 # Ruby
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
+
+# Zig
+export PATH=$PATH:/opt/zig/bin

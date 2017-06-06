@@ -13,7 +13,6 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'tiehuis/0x4545-256.vim'
 Plug 'ciaranm/detectindent'
 Plug 'nacitar/a.vim'
-Plug 'mesonbuild/meson', { 'do': 'mv syntax-highlighting/vim/* .' }
 
 " lang-specific
 Plug 'andrewrk/zig.vim'
@@ -41,6 +40,12 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=80 fo+=t
 " spellcheck markdown files only
 autocmd FileType markdown setlocal spell spelllang=en_nz
 
+" persistent undo for cross-sessions
+set undofile
+set undodir=~/.config/nvim/undo//
+set undolevels=1000
+set undoreload=1000
+
 " backups are useful when you need them
 set backup
 set backupdir=~/.config/nvim/back//
@@ -49,6 +54,7 @@ set directory=~/.config/nvim/swap//
 " ensure backup directories are present (Note: takes ~5ms)
 silent !mkdir ~/.config/nvim/back// > /dev/null 2>&1
 silent !mkdir ~/.config/nvim/swap// > /dev/null 2>&1
+silent !mkdir ~/.config/nvim/undo// > /dev/null 2>&1
 
 " @ctrlp
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
@@ -211,7 +217,7 @@ set nofoldenable
 set ttyfast
 
 " keep some space around above and below current line
-set scrolloff=20
+set scrolloff=15
 
 " if we forget to open a file as root, allow a write anyway
 cmap w!! w !sudo tee > /dev/null %

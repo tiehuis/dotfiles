@@ -135,6 +135,9 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+" disable syntax highlighting on long lines
+set synmaxcol=200
+
 " show the command bar
 set showcmd
 

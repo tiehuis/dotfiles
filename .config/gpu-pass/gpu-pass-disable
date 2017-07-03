@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# This assumes the following:
+#
+# - you have a nvidia graphics card
+#
+# A restart is required following this.
+
+if [ "$EUID" -ne 0 ]; then
+    echo "this script must be running as root"
+    exit
+fi
+
+local_dir="/home/me/.config/gpu-pass"
+
+set -x
+
+rm -f /etc/modprobe.d/vfio.conf
+cp "$local_dir/mkinitcpio.conf" /etc/mkinitcpio.conf
+cp "$local_dir/nvidia_gpu_xorg.conf" /etc/X11/xorg.conf
+
+mkinitcpio -p linux

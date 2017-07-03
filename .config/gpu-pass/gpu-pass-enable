@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This assumes the following:
+#
+# - the pci device id's to disable are listed in modprobe_vfio.conf
+# - you have onboard intel graphics as a backup
+# - vfio-pci is enabled on your kernel
+#
+# A restart is required following this. You should have a separate graphics
+# driver to boot from.
+
+if [ "$EUID" -ne 0 ]; then
+    echo "this script must be running as root"
+    exit
+fi
+
+local_dir="/home/me/.config/gpu-pass"
+
+set -x
+
+cp "$local_dir/modprobe_vfio.conf" /etc/modprobe.d/vfio.conf
+cp "$local_dir/mkinitcpio_vfio.conf" /etc/mkinitcpio.conf
+cp "$local_dir/intel_gpu_xorg.conf" /etc/X11/xorg.conf
+
+mkinitcpio -p linux

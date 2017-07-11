@@ -8,6 +8,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
 Plug 'junegunn/vim-peekaboo'
+Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-signify'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'tiehuis/0x4545-256.vim'
@@ -63,6 +64,10 @@ let g:ctrlp_cache_dir = '~/.cache/ctrlp'
 
 " @signify
 let g:signify_vcd_list = [ 'git' ]
+
+" @vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " easier to open in new tabs
 let g:ctrlp_prompt_mappings = {

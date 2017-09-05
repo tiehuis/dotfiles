@@ -7,9 +7,15 @@ export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.local/share/cargo/bin
 export CARGO_HOME=~/.local/share/cargo
 export RUSTUP_HOME=~/.local/share/rustup
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 # Ruby
 export PATH=$PATH:~/.gem/ruby/2.4.0/bin
 
 # Js
 export PATH=$PATH:~/.local/share/npm/bin
+
+# zig
+compinit -Uz _zig
+# see https://github.com/zig-lang/docker-zig
+alias zigi='docker run --rm -it -v "$(pwd)":/z zig bash'

@@ -5,25 +5,31 @@ filetype off
 call plug#begin('~/.config/nvim/plugged')
 
 " general
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/goyo.vim', { 'for': 'markdown' }
+Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install -all' }
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'junegunn/vim-easy-align'
 Plug 'mhinz/vim-signify'
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'tiehuis/0x4545-256.vim'
 Plug 'ciaranm/detectindent'
 Plug 'nacitar/a.vim'
 
 " lang-specific
-Plug 'andrewrk/zig.vim'
+Plug 'zig-lang/zig.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'JuliaEditorSupport/julia-vim'
+
+" colorschemes
+Plug 'tiehuis/0x4545-256.vim'
 
 call plug#end()
 
-" automatically insert unicode symbols for julia
-let g:latex_to_unicode_auto = 1
+let g:fzf_action = { 'enter': 'tab split' }
+let g:fzf_buffers_jump = 1
+let g:fzf_tags_command = 'ctags -R'
+
+" shortcut for fzf file searching
+nnoremap <C-P> :Files<CR>
 
 " indentation based on file-type is okay
 filetype plugin indent on
@@ -33,13 +39,16 @@ syntax on
 colorscheme desert
 
 " git
-autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype gitcommit setlocal spell tw=72
 
 " markdown
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown tw=80 fo+=t
+au BufNewFile,BufFilePre,BufRead *.md set ft=markdown tw=80 fo+=t
 
 " spellcheck markdown files only
 autocmd FileType markdown setlocal spell spelllang=en_nz
+
+" html uses two spaces
+autocmd FileType html,yaml setlocal ts=2 sts=2 sw=2
 
 " persistent undo for cross-sessions
 set undofile
@@ -57,23 +66,12 @@ silent !mkdir ~/.config/nvim/back// > /dev/null 2>&1
 silent !mkdir ~/.config/nvim/swap// > /dev/null 2>&1
 silent !mkdir ~/.config/nvim/undo// > /dev/null 2>&1
 
-" @ctrlp
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0
-let g:ctrlp_cache_dir = '~/.cache/ctrlp'
-
 " @signify
 let g:signify_vcd_list = [ 'git' ]
 
 " @vim-easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
-
-" easier to open in new tabs
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")' : ['<c-t>'],
-    \ 'AcceptSelection("t")' : ['<cr>', '<2-LeftMouse>'],
-    \ }
 
 " need to know where those 80 lines are
 set colorcolumn=81

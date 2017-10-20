@@ -9,6 +9,7 @@ source $PX/general.zsh
 source $PX/history.zsh
 source $PX/lang.zsh
 source $PX/prompt.zsh
+source $PX/fzf.zsh
 source $PX/zplug.zsh
 
 # Ensure custom completion scripts loaded anywhere are respected

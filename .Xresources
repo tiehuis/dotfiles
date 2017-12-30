@@ -1,7 +1,7 @@
 #include ".Xcolors"
 
-*foreground: #DDCCBB
-*background: #000000
+URxvt*foreground: #DDCCBB
+URxvt*background: #000000
 
 URxvt.cursorBlink:  1
 URxvt.scrollBar:    false

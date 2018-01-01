@@ -13,12 +13,16 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# Uncomment to force single enlongated screen
+# force_xinerama yes
+# fake-outputs 3840x1080+0+0
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec \
-    "dmenu_run -fn '-*-tewi-medium-*-*-*-*-*-*-*-*-*-*' -h 18 -z -q -nf white"
+    "dmenu_run -fn '-*-tewi-medium-*-*-*-*-*-*-*-*-*-*' -h 18 -z -q -nb black -nf white"
 
 # change focus
 bindsym $mod+j focus left

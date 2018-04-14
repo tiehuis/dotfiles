@@ -82,8 +82,8 @@ call plug#end()
 
     " backups are invaluable when you accidently rm something
     set backup
-    silent !mkdir $XDG_DATA_HOME/nvim/backup// > /dev/null 2>&1
-    set backupdir=$XDG_DATA_HOME/nvim/backup//
+    silent !mkdir ~/.local/share/nvim/backup// > /dev/null 2>&1
+    set backupdir=~/.local/share/nvim/backup//
 
 " @plugin config
     " @fzf

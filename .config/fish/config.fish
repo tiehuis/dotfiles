@@ -27,9 +27,13 @@ end
     set fish_greeting
 
 # exports
-    set -x EDITOR nvim
-    set -x VISUAL "$EDITOR"
-    set -x WINEDLLOVERRIDES 'winemenubuilder.exe=d'
+    set -U EDITOR nvim
+    set -U VISUAL "$EDITOR"
+    set -U WINEDLLOVERRIDES 'winemenubuilder.exe=d'
+
+    set -U XDG_CACHE_HOME "$HOME/.cache"
+    set -U XDG_CONFIG_HOME "$HOME/.config"
+    set -U XDG_DATA_HOME "$HOME/.local/share"
 
 # aliases
     alias pacman 'sudo pacman'

@@ -43,22 +43,24 @@ end
     alias mpa 'mpv -profile music'
     alias dotfiles 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+    alias mpashuf 'mpv -profile music (find ~/sndo -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
+
 # lang-specific
     # python
-    set -gx PATH '~/.local/bin' $PATH
+    set PATH "$HOME/.local/bin" $PATH
 
     # rust
-    set -gx PATH '~/.local/share/cargo/bin' $PATH
-    set -x CARGO_HOME '~/.local/share/cargo'
-    set -x RUSTUP_HOME '~/.localshare/rustup'
-    set -x RUST_SRC_PATH "(rustc --print sysroot)/lib/rustlib/src/rust/src"
+    set PATH "$HOME/.local/share/cargo/bin" $PATH
+    set CARGO_HOME "$HOME/.local/share/cargo"
+    set RUSTUP_HOME "$HOME/.localshare/rustup"
+    set RUST_SRC_PATH "(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
     # go
-    set -gx PATH '~/.go/bin' $PATH
-    set -x GOPATH '~/.go'
+    set PATH "$HOME/.go/bin" $PATH
+    set GOPATH "$HOME/.go"
 
     # js
-    set -gx PATH '~/.local/share/npm/bin' $PATH
+    set PATH "$HOME/.local/share/npm/bin" $PATH
 
     # zig
-    set -gx PATH '~/local/bin' $PATH
+    set PATH "$HOME/local/bin" $PATH

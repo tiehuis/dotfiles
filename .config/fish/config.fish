@@ -35,6 +35,8 @@ end
     set -U XDG_CONFIG_HOME "$HOME/.config"
     set -U XDG_DATA_HOME "$HOME/.local/share"
 
+    set -gx WEECHAT_HOME "$XDG_CONFIG_HOME/weechat"
+
 # aliases
     alias pacman 'sudo pacman'
     alias g 'git'
@@ -64,3 +66,6 @@ end
 
     # zig
     set PATH "$HOME/local/bin" $PATH
+
+    # fzf
+    set PATH "$HOME/.local/share/fzf/bin" $PATH

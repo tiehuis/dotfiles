@@ -38,7 +38,6 @@ end
     set -gx WEECHAT_HOME "$XDG_CONFIG_HOME/weechat"
 
 # aliases
-    alias pacman 'sudo pacman'
     alias g 'git'
     alias vim 'nvim'
     alias mpi 'mpv -profile image'
@@ -53,13 +52,13 @@ end
 
     # rust
     set PATH "$HOME/.local/share/cargo/bin" $PATH
-    set CARGO_HOME "$HOME/.local/share/cargo"
-    set RUSTUP_HOME "$HOME/.localshare/rustup"
-    set RUST_SRC_PATH "(rustc --print sysroot)/lib/rustlib/src/rust/src"
+    set -x CARGO_HOME "$HOME/.local/share/cargo"
+    set -x RUSTUP_HOME "$HOME/.local/share/rustup"
+    set -x RUST_SRC_PATH "(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
     # go
     set PATH "$HOME/.go/bin" $PATH
-    set GOPATH "$HOME/.go"
+    set -x GOPATH "$HOME/.go"
 
     # js
     set PATH "$HOME/.local/share/npm/bin" $PATH

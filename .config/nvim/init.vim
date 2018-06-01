@@ -31,7 +31,6 @@ call plug#end()
 
     " long-line marker, inverted for subtle effect
     set colorcolumn=81
-    highlight ColorColumn cterm=reverse ctermfg=0 ctermbg=1
 
     " use the system clipboard by default: linux
     set clipboard=unnamed

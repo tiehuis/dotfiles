@@ -8,7 +8,6 @@
     export XDG_DATA_HOME=$HOME/.local/share
 
     # configuration overrides to better match xdg specification
-    export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/settings.ini"
     export WEECHAT_HOME="$XDG_CONFIG_HOME/weechat"
     export HTTPIE_CONFIG_DIR="$XDG_CONFIG_HOME/httpie"
     export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"

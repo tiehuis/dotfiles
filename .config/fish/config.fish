@@ -25,6 +25,7 @@ end
 
 # general
     set fish_greeting
+    set PATH "$HOME/bin" $PATH
 
 # exports
     set -U EDITOR nvim

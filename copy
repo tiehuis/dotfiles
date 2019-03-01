@@ -1,0 +1,36 @@
+#!/bin/sh
+
+USAGE=$(cat <<-END
+usage: copy [diff|do]
+
+Commands
+
+    diff    Compares this repository to the local system to determine if any
+            changes need to be applied.
+
+    copy    Performs an actual full-copy of all data within this repository to
+            the local system. Backups are saved in the repository directory so
+            any unforseen changes can be reverted.
+END
+)
+
+command -v rsync > /dev/null 2>&1 || {
+    echo >&2 "rsync not installed"
+    exit 1
+}
+
+EXCLUDE='--exclude=.git --exclude=copy --exclude=README'
+
+case $1 in
+    ''|'diff')
+        rsync -tc -i -r . "$HOME" $EXCLUDE -n
+    ;;
+
+    'do')
+        rsync -tc -i -r . "$HOME" $EXCLUDE
+        echo "copied!"
+    ;;
+
+    *)
+        echo "$USAGE"
+esac

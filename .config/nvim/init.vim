@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
     " general
-    Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install -all' }
+    Plug 'junegunn/fzf', { 'dir': '~/.local/share/fzf', 'do': './install --all' }
     Plug 'junegunn/fzf.vim'
     Plug 'junegunn/goyo.vim'
     Plug 'junegunn/vim-peekaboo'
@@ -97,6 +97,10 @@ call plug#end()
     " @vim-easy-align
         xmap ga <Plug>(EasyAlign)
         nmap ga <Plug>(EasyAlign)
+
+    " @zig
+        let g:zig_fmt_command = ['zig2', 'fmt', '--color', 'off']
+        let g:zig_fmt_autosave = 1
 
     " @signify
         let g:signify_vcd_list = [ 'git' ]

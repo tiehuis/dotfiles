@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xrdb -load ~/.Xresources
-sh ~/.fehbg &
 ~/bin/./nvfancontrol -f &
+urxvtd -q -f -o
 xset -b
 exec i3

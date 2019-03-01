@@ -19,15 +19,16 @@ command -v rsync > /dev/null 2>&1 || {
     exit 1
 }
 
-EXCLUDE='--exclude=.git --exclude=copy --exclude=README'
+EXCLUDE='--exclude=.git --exclude .gitignore --exclude=copy --exclude=README --exclude backup'
+OPTIONS="--recursive --checksum --itemize-changes --backup --backup-dir=$(pwd)/backup"
 
 case $1 in
     ''|'diff')
-        rsync -tc -i -r . "$HOME" $EXCLUDE -n
+        rsync $OPTIONS . "$HOME" $EXCLUDE --dry-run
     ;;
 
     'do')
-        rsync -tc -i -r . "$HOME" $EXCLUDE
+        rsync $OPTIONS . "$HOME" $EXCLUDE
         echo "copied!"
     ;;
 

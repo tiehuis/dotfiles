@@ -99,7 +99,7 @@ call plug#end()
         nmap ga <Plug>(EasyAlign)
 
     " @zig
-        let g:zig_fmt_command = ['zig2', 'fmt', '--color', 'off']
+        let g:zig_fmt_command = ['zig', 'fmt', '--color', 'off']
         let g:zig_fmt_autosave = 1
 
     " @signify

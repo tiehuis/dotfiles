@@ -41,11 +41,11 @@ end
 # aliases
     alias g 'git'
     alias vim 'nvim'
-    alias mpi 'mpv -profile image'
-    alias mpa 'mpv -profile music'
+    alias mpi 'mpv -profile=image'
+    alias mpa 'mpv -profile=music'
     alias dotfiles 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
-    alias mpashuf 'mpv -profile music (find ~/sndo -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
+    alias mpashuf 'mpv -profile=music (find ~/sndo -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
 
 # lang-specific
     # python

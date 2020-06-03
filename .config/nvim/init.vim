@@ -51,7 +51,7 @@ call plug#end()
     set mouse=a
 
     " make messages fit in prompt
-    set shortmess=at
+    "set shortmess=at
 
     " ignore case when searching, except if explicit uppercase
     set ignorecase smartcase

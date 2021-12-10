@@ -28,7 +28,7 @@ case $1 in
     ;;
 
     'diff-verbose')
-        rsync $OPTIONS . "$HOME" $EXCLUDE --dry-run | cut -d' ' -f2 | xargs -I % diff -c --color % ~/%
+        rsync $OPTIONS . "$HOME" $EXCLUDE --dry-run | cut -d' ' -f2 | xargs -I % diff -c --color ~/% %
     ;;
 
     'do')

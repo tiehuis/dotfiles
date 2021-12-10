@@ -27,6 +27,10 @@ case $1 in
         rsync $OPTIONS . "$HOME" $EXCLUDE --dry-run
     ;;
 
+    'diff-verbose')
+        rsync $OPTIONS . "$HOME" $EXCLUDE --dry-run | cut -d' ' -f2 | xargs -I % diff -c --color % ~/%
+    ;;
+
     'do')
         rsync $OPTIONS . "$HOME" $EXCLUDE
         echo "copied!"

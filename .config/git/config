@@ -15,6 +15,16 @@
 [push]
     default = simple
 
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+
+[rebase]
+    autoStash = true
+    autoSquash = true
+
 [credential]
     helper = cache
 
@@ -26,6 +36,7 @@
 
 [diff]
     algorithm = histogram
+    colorMoved = zebra
 
 [alias]
     a  = add

@@ -6,21 +6,10 @@ end
 
 # prompt
     function fish_prompt
-        if [ "$status" != 0 ]
-            set_color red
-        end
-
-        echo -n "\$ "
-        set_color normal
-
-        set git_branch (git rev-parse --abbrev-ref HEAD ^ /dev/null)
-        if [ -n "$git_branch" ]
-            echo -n "("
-            set_color yellow
-            echo -n "$git_branch"
-            set_color normal
-            echo -n ") "
-        end
+        set -g __fish_git_prompt_showupstream verbose
+        set -g __fish_git_prompt_use_informative_chars
+        set -g __fish_git_prompt_showcolorhints
+        printf '%s $ ' (fish_git_prompt)
     end
 
 # general

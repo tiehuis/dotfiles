@@ -25,8 +25,6 @@ end
     set -U XDG_CONFIG_HOME "$HOME/.config"
     set -U XDG_DATA_HOME "$HOME/.local/share"
 
-    set -gx WEECHAT_HOME "$XDG_CONFIG_HOME/weechat"
-
 # aliases
     alias g 'git'
     alias vim 'nvim'
@@ -49,9 +47,6 @@ end
     # go
     set PATH "$HOME/.go/bin" $PATH
     set -x GOPATH "$HOME/.go"
-
-    # js
-    set PATH "$HOME/.local/share/npm/bin" $PATH
 
     # zig
     set PATH "$HOME/local/bin" $PATH

@@ -12,6 +12,9 @@
     statusHints = false
     detachedHead = false
 
+[init]
+    defaultBranch = master
+
 [push]
     default = simple
 

@@ -31,7 +31,7 @@ end
     alias mpi 'mpv -profile=image'
     alias mpa 'mpv -profile=music'
     alias dotfiles 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    alias mpashuf 'mpv -profile=music (find ~/sndo -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
+    alias mpashuf 'mpv -profile=music (find ~/snd -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
 
     function gitpr --description "pull git pr" --argument-names id
         if test -n "$id"

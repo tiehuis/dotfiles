@@ -79,6 +79,10 @@ call plug#end()
     " persistent undo across sessions
     set undofile
 
+    " preserve screen position on exit/load
+    autocmd BufLeave,BufWinLeave *.* silent! mkview
+    autocmd BufReadPost *.* silent! loadview
+
     " backups are invaluable when you accidently rm something
     set backup
     silent !mkdir ~/.local/share/nvim/backup// > /dev/null 2>&1

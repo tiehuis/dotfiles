@@ -33,6 +33,9 @@ bindsym $mod+semicolon focus right
 # GUI file manager shortcut
 bindsym $mod+e exec thunar
 
+# Screenshot
+bindsym --release $mod+a exec scrot -s
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down

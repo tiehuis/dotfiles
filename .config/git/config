@@ -56,6 +56,12 @@
     p  = push
     s  = status
 
+    prz = "!sh -c '\
+      name=$2; \
+      if [ -z $name ]; then name="pull/$1"; fi; \
+      git fetch upstream pull/$1/head:$name; \
+        git checkout $name' -"
+
     pr = "!sh -c '\
       name=$2; \
       if [ -z $name ]; then name="pull/$1"; fi; \

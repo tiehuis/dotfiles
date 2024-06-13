@@ -11,7 +11,7 @@ font -*-tewi-medium-*-*-*-*-*-*-*-*-*-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec alacritty
 
 # Uncomment to force single enlongated screen
 # force_xinerama yes

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-xrdb -load ~/.Xresources
-~/bin/./nvfancontrol -f &
-urxvtd -q -f -o
 xset -b
+xrandr --output DP-0 --mode 2560x1440 --rate 143.91
 exec i3

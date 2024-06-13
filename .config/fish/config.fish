@@ -20,6 +20,7 @@ end
     set -U EDITOR nvim
     set -U VISUAL "$EDITOR"
     set -U WINEDLLOVERRIDES 'winemenubuilder.exe=d'
+    set -U BROWSER google-chrome-stable
 
     set -U XDG_CACHE_HOME "$HOME/.cache"
     set -U XDG_CONFIG_HOME "$HOME/.config"
@@ -32,14 +33,6 @@ end
     alias mpa 'mpv -profile=music'
     alias dotfiles 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
     alias mpashuf 'mpv -profile=music (find ~/snd -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
-
-    function gitpr --description "pull git pr" --argument-names id
-        if test -n "$id"
-            git fetch origin "pull/$id/head:pr-$id"
-        else
-            echo 'usage: gitpr $id'
-        end
-    end
 
 # lang-specific
     # python
@@ -56,7 +49,7 @@ end
     set -x GOPATH "$HOME/.go"
 
     # zig
-    set PATH "$HOME/local/bin" $PATH
+    set PATH "$HOME/local/zig/bin" $PATH
 
     # fzf
     set PATH "$HOME/.local/share/fzf/bin" $PATH

@@ -1,10 +1,13 @@
 separator_block_width=25
 
-[volume]
-instance=Master
-command=bash ~/.config/i3blocks/volume
-interval=once
-signal=10
+#[volume]
+#instance=Master
+#command=bash ~/.config/i3blocks/volume
+#interval=once
+#signal=10
+
+[volume-pipewire]
+command=bash ~/.config/i3blocks/volume-pipewire
 
 [time]
 command=date '+%d - %T'

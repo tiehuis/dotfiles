@@ -1,5 +1,6 @@
 [font]
-normal = { family = "lucy tewi", style = "Regular" }
+normal = { family = "lucy tewi", style = "medium" }
+size = 8
 bold = { style = "Regular" }
 
 [colors.primary]

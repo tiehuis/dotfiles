@@ -8,6 +8,9 @@
 [credential "https://github.com"]
     username = tiehuis
 
+[credential "https://codeberg.org"]
+    username = tiehuis
+
 [advice]
     statusHints = false
     detachedHead = false

@@ -20,7 +20,7 @@ end
     set -U EDITOR nvim
     set -U VISUAL "$EDITOR"
     set -U WINEDLLOVERRIDES 'winemenubuilder.exe=d'
-    set -U BROWSER google-chrome-stable
+    set -U BROWSER firefox
 
     set -U XDG_CACHE_HOME "$HOME/.cache"
     set -U XDG_CONFIG_HOME "$HOME/.config"
@@ -31,8 +31,17 @@ end
     alias vim 'nvim'
     alias mpi 'mpv -profile=image'
     alias mpa 'mpv -profile=music'
-    alias dotfiles 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-    alias mpashuf 'mpv -profile=music (find ~/snd -mindepth 2 -maxdepth 2 -type d | shuf -n 1)'
+    alias unp 'unp -U'
+
+# fzf
+    set PATH "$HOME/.local/share/fzf/bin" $PATH
+    set -x FZF_CTRL_T_COMMAND '
+        if git rev-parse --is-inside-work-tree > /dev/null 2>&1
+            git ls-files --cached --others --exclude-standard
+        else
+            fd --type f
+        end
+    '
 
 # lang-specific
     # python
@@ -50,6 +59,3 @@ end
 
     # zig
     set PATH "$HOME/local/zig/bin" $PATH
-
-    # fzf
-    set PATH "$HOME/.local/share/fzf/bin" $PATH

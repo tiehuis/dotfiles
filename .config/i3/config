@@ -142,4 +142,4 @@ bar {
 }
 
 # various default window settings for some applications
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
